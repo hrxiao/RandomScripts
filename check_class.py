@@ -28,11 +28,11 @@ for course, class_link in class_dict.items():
 		if is_open:
 			output += 'Status: ' + is_open.group(1) + '\t'
 			if is_open.group(1) == 'Closed':
-				waitlist = re.search('Waitlist:(\d+)', cleaned_text)
+				waitlist = re.search('WaitList:(\d+)', cleaned_text)
 				if waitlist:
-					output += 'Waitlist: ' + waitlist + '\t'
+					output += 'WaitList: ' + waitlist.group(1) + '\t'
 				else:
-					output += 'Waitlist: -' + '\t'
+					output += 'WaitList: -' + '\t'
 			else:
 				open_seats = re.search('OpenSeats:(\d+)', cleaned_text)
 				if open_seats:

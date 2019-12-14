@@ -172,3 +172,6 @@ echo
 
 # thefuck: https://github.com/nvbn/thefuck
 eval $(thefuck --alias)
+
+# Anaconda
+export PATH=$PATH:"$HOME/anaconda3/bin"
